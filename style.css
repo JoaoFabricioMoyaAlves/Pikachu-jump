@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: linear-gradient(to right, #000000, #0f014d);
+}
+
+.tela{
+   
+    margin: 30px auto;
+    width: 800px;
+    height: 500px;
+    border-bottom: 25px solid rgb(0, 0, 0);
+    position: relative;
+    background: url('assets/fundo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 800px 500px;
+    overflow:hidden;
+}
+
+#fantasma{
+        
+    bottom: -20px;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    animation: fantasma 3s infinite linear;
+}
+
+#fantasma img{
+    width: 100%;
+    height:100%;
+}
+#cova{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    display: none;
+}
+
+#cova img{
+    width: 100%;
+    height: 100%;
+}
+
+#rain{
+    position: absolute;
+    height: 800px;
+    width: 1100px;
+    left: -90px;
+    top: -50px;
+}
+
+#rain img{
+    height: 100%;
+    width: 100%;
+}
+
+
+#pikachu{
+    left: 50px;
+    bottom: 0px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    
+}
+
+.jump{
+    animation: jump 1s infinite;
+}
+
+#pikachu img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes fantasma{
+    from{
+     right: -100px;  
+    }to{
+   right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom:0px;
+    }25%{
+        bottom:100px;
+    }50%{
+        bottom:100px;
+    }60%{
+        bottom:100px;
+    }100%{
+        bottom:0px;
+    }
+    
+}
