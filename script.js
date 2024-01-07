@@ -2,6 +2,7 @@ const pikachu = document.querySelector('.pikachu');
 const fantasma = document.querySelector('.fantasma');
 const cova = document.querySelector('.cova');
 const gameover = document.querySelector('.game-over');
+const musica = document.querySelector('#msc');
 
 let segundos = 0;
 
@@ -23,8 +24,10 @@ let segundos = 0;
 
 const jump = () =>{
     pikachu.classList.add('jump');
+    pikachu.querySelector('img').src = 'assets/pulo.png'; 
     setTimeout(()=>{
     pikachu.classList.remove('jump');
+    pikachu.querySelector('img').src = 'assets/pikachu.gif';
     },800 );
 }
 
@@ -44,6 +47,7 @@ const loop = setInterval(()=> {
         cova.style.left=`${pikachuPosition}px`;
         cova.style.display = 'block';
         pikachu.querySelector('img').src = 'assets/over.png';
+        msc.pause();
 
 
         gameover.style.display = 'block'; 

@@ -9,6 +9,10 @@ body{
     background: linear-gradient(to right, #000000, #0f014d);
 }
 
+audio{
+    display: none;
+}
+
 .tela{
    
     margin: 30px auto;
@@ -29,7 +33,7 @@ body{
     position: absolute;
     width: 120px;
     height: 120px;
-    animation: fantasma 3s infinite linear;
+    animation: fantasma 2.5s infinite linear;
 }
 
 #fantasma img{
