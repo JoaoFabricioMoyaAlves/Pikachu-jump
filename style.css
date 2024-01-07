@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -69,6 +72,7 @@ body{
     
 }
 
+
 .jump{
     animation: jump 1s infinite;
 }
@@ -78,6 +82,35 @@ body{
     height: 100%;
 }
 
+.game-over{
+    display: none;
+    position: relative;
+    top: 25%; 
+    left: 25%;
+   
+}
+
+.game-over h1{
+    font-size: 90px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.game-over button{
+    margin-left: 180px;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+}
+.Score{
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Pixelify Sans', sans-serif;
+}
 
 @keyframes fantasma{
     from{

@@ -1,9 +1,26 @@
 const pikachu = document.querySelector('.pikachu');
 const fantasma = document.querySelector('.fantasma');
 const cova = document.querySelector('.cova');
+const gameover = document.querySelector('.game-over');
+
+let segundos = 0;
+
+        // Função para atualizar e exibir o contador
+        function atualizarContador() {
+            document.getElementById('contador').innerText = segundos;
+        }
+
+        // Função que será chamada a cada segundo
+        function incrementarSegundos() {
+            segundos++;
+            atualizarContador();
+        }
+
+        // Atualiza o contador a cada segundo (1000 milissegundos)
+        const intervalo = setInterval(incrementarSegundos, 1000); 
 
 
- 
+
 const jump = () =>{
     pikachu.classList.add('jump');
     setTimeout(()=>{
@@ -28,15 +45,22 @@ const loop = setInterval(()=> {
         cova.style.display = 'block';
         pikachu.querySelector('img').src = 'assets/over.png';
 
-     
+
+        gameover.style.display = 'block'; 
+
+        clearInterval(intervalo);
         clearInterval(loop);
 
      }
 
 
 
-})
+},10)
 
+function recarregarPagina() {
+ 
+    location.reload();
+  }
 
 
 document.addEventListener('keydown',jump);
